@@ -11,7 +11,6 @@ import java.util.stream.Collectors;
 public class FrequencyService {
 
     public Map <Character, Integer> calculatingTheFrequency(String symbols) {
-
         List<Character> list = symbols
                 .chars()
                 .mapToObj(c -> (char) c).toList();
