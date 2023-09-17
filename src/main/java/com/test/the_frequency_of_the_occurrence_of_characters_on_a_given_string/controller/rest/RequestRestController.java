@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Optional;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/rest")
@@ -19,7 +19,7 @@ public class RequestRestController {
     private final FrequencyService frequencyService;
 
     @GetMapping("/{symbols}")
-    public Optional<String> getProductById(@PathVariable String symbols) {
+    public Map<Character, Integer> getProductById(@PathVariable String symbols) {
         return frequencyService.calculatingTheFrequency(symbols);
     }
 
